@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Video Downloader and Image Converter</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">Video Downloader and Image Converter</h1>
+
+      <!-- Video Downloader Form -->
+      <div class="card mt-4">
+        <div class="card-header">
+          Download YouTube Video
+        </div>
+        <div class="card-body">
+          <form action="/download" method="post">
+            <div class="form-group">
+              <label for="url">YouTube Video URL</label>
+              <input type="text" class="form-control" id="url" name="url" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Download</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Image Converter Form -->
+      <div class="card mt-4">
+        <div class="card-header">
+          Convert Image
+        </div>
+        <div class="card-body">
+          <form action="/convert" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="file">Choose Image</label>
+              <input type="file" class="form-control-file" id="file" name="file" required>
+            </div>
+            <div class="form-group">
+              <label for="format">Convert To</label>
+              <select class="form-control" id="format" name="format" required>
+                <option value="jpeg">JPEG</option>
+                <option value="png">PNG</option>
+                <option value="gif">GIF</option>
+                <option value="bmp">BMP</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Convert</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
